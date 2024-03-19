@@ -20,6 +20,8 @@ public class TestContext {
             options.addArguments("--no-sandbox");
             options.addArguments("--headless");
             options.addArguments("--remote-debugging-pipe");
+            options.addArguments("--window-size=1000,800");
+
             driver = new ChromeDriver(options);
             driver.manage().window().maximize();
         }
