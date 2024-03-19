@@ -12,10 +12,10 @@ public class HomePage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(id = "twotabsearchtextbox")
+    @FindBy(xpath = "//input[@id='twotabsearchtextbox']")
     private WebElement searchBox;
 
-    @FindBy(id = "nav-search-submit-button")
+    @FindBy(xpath = "//input[@id='nav-search-submit-button']")
     private WebElement searchBoxButton;
 
     @FindBy(xpath = "//span[contains(text(),'Apple')][1]")
@@ -34,7 +34,7 @@ public class HomePage extends BasePage {
     }
 
     public String appleProdcutName(){
-        return productNameApple.getText();
+        return productNameApple.getText().substring(0,12);
     }
 
     public String productNameIphone(){
